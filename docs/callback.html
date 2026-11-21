@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Authorization</title>
+<style>body{font-family:system-ui,sans-serif;max-width:700px;margin:40px auto;padding:0 16px;line-height:1.6}code{word-break:break-all;display:block;background:#eee;padding:12px}</style></head>
+<body>
+<h1>Authorization complete</h1>
+<p>Copy this line and paste it into your terminal when asked. It is shown only in your browser and is not sent anywhere.</p>
+<code id="out">Waiting...</code>
+<script>
+var p = new URLSearchParams(location.search);
+document.getElementById('out').textContent = p.get('code') || ('No code found. ' + (p.get('error_description') || ''));
+</script>
+</body></html>
